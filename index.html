@@ -17,21 +17,51 @@
 
 	<!-- Вattle 1 Exercise 1 -->
 	<div class="battle">
-		<div class="battle__name">Ex.1</div>
+		<div class="battle__name">Ex.2</div>
 		<div class="battle__field">
 			<div class="body__ex-1">
 				<!-- Your code here -->
-				<div class="div__ex-1"></div>
+				<div class="first"></div>
+				<div class="second"></div>
+				<div class="third"></div>
+				<div class="fourth"></div>
 				<style>
-					.div__ex-1 {
-						background: #b5e0ba;
-						height: 200px;
-						width: 200px;
+  					.body__ex-1 {
+						background: #62374e;
+						position:relative;
 					}
-
-					.body__ex-1 {
-						background: #5d3a3a;
-					}
+  					div.first{
+    					position:absolute;
+    					top:50px;
+    					left:50px;
+						width: 50px;
+    					height: 50px;
+    					background: #fdc57b;
+  					}
+  					div.second{
+    					position:absolute;
+    					bottom:50px;
+    					left:50px;
+						width: 50px;
+    					height: 50px;
+    					background: #fdc57b;
+  					}
+  					div.third{
+    					position:absolute;
+    					right:50px;
+    					top:50px;
+						width: 50px;
+    					height: 50px;
+    					background: #fdc57b;
+  					}
+  					div.fourth{
+    					position:absolute;
+    					right:50px;
+    					bottom:50px;
+						width: 50px;
+    					height: 50px;
+    					background: #fdc57b;
+  					}
 				</style>
 			</div>
 		</div>
@@ -40,25 +70,42 @@
 
 <!-- Вattle 1 Exercise 2 -->
 <div class="battle">
-	<div class="battle__name">Ex.2</div>
+	<div class="battle__name">Ex.3</div>
 	<div class="battle__field">
 		<div class="body__ex-2">
 			<!-- Your code here -->
-			<div class="div__ex-2"></div>
+			<div class="box"></div>
+			<div class="circle"></div>
 			<style>
-				.div__ex-2 {
-					background: #b5e0ba;
-					height: 200px;
-					width: 200px;
-					border-radius: 50%;
-					margin-left: 100px;
-					margin-top: 49px;
+  				.body__ex-2 {
+    				margin: 0;
+    				background: #6592CF;
+					position: relative;
 				}
-
-				.body__ex-2 {
-					background: #ac1010;
-					padding-top: 1px;
+				.box {
+    				background: #243D83;
+    				width: 300px;
+    				height: 150px;
+    				transform: translate(50px, 50%)
 				}
+				.circle {
+    				position: absolute;
+    				transform: translate(75px, -50%);
+    				background: #243D83;
+    				width: 150px;
+    				height: 150px;
+    				border: 50px solid #6592CF;
+    				border-radius: 999px
+				}
+				.circle::before {
+    				position: absolute;
+    				content: "";
+    				border-radius: 10rem;
+    				inset: 50px;
+    				width: 50px;
+    				height: 50px;
+    				background: #EEB850
+			}
 			</style>
 		</div>
 	</div>
@@ -86,31 +133,6 @@
 		</div>
 	</div>
 </div>
-
-
-<!-- Вattle 1 Exercise 6 -->
-<div class="battle">
-	<div class="battle__name">Ex.6</div>
-	<div class="battle__field">
-		<div class="body__ex-1">
-			<!-- Your code here -->
-			<div class="div__ex-1"></div>
-			<style>
-				.div__ex-1 {
-					background: #b5e0ba;
-					height: 200px;
-					width: 200px;
-				}
-
-				.body__ex-1 {
-					background: #5d3a3a;
-				}
-			</style>
-		</div>
-	</div>
-</div>
-
-
 </body>
 
 </html>
