@@ -116,18 +116,40 @@
 <div class="battle">
 	<div class="battle__name">Ex.4</div>
 	<div class="battle__field">
-		<div class="body__ex-1">
+		<div class="body__ex-4">
 			<!-- Your code here -->
-			<div class="div__ex-1"></div>
+			<p class="left"></p>
+			<p class="middle"></p>
+			<p class="right"></p>
 			<style>
-				.div__ex-1 {
-					background: #b5e0ba;
-					height: 200px;
-					width: 200px;
+  				.body__ex-4 {
+  					margin: 0;
+  					background: #62306d;
+					position: relative;
 				}
-
-				.body__ex-1 {
-					background: #5d3a3a;
+				.middle,
+				.left,
+				.right {
+  					position: absolute;
+  					background: #f7ec7d;
+  					width: 100px;
+  					height: 100px;
+  					border-radius: 10rem 10rem 0px 0px;
+  					margin-top: 50px;
+				}
+				.middle {
+  					left: 150px;
+				}
+				.left,
+				.right {
+  					transform: rotate(180deg);
+  					bottom: 34px;
+				}
+				.left {
+  					left: 50px;
+				}
+				.right {
+  					right: 50px;
 				}
 			</style>
 		</div>
