@@ -26,9 +26,22 @@
 				<div class="third"></div>
 				<div class="fourth"></div>
 				<style>
+					@keyframes ex1first{
+						0% {background-color: #fdc57b;}
+						50% {background-color: red;}
+						100% {background-color: #fdc57b;}
+					}
+					@keyframes ex1second{
+						0% {background-color: #62374e;}
+						50% {background-color: green;}
+						100%{background-color: #62374e;}
+					}
   					.body__ex-1 {
 						background: #62374e;
 						position:relative;
+						animation-name: ex1second;
+						animation-duration: 10s;
+						animation-iteration-count: infinite;
 					}
   					div.first{
     					position:absolute;
@@ -37,6 +50,9 @@
 						width: 50px;
     					height: 50px;
     					background: #fdc57b;
+						animation-name: ex1first;
+						animation-duration: 10s;
+						animation-iteration-count: infinite;
   					}
   					div.second{
     					position:absolute;
@@ -45,6 +61,9 @@
 						width: 50px;
     					height: 50px;
     					background: #fdc57b;
+						animation-name: ex1first;
+						animation-duration: 10s;
+						animation-iteration-count: infinite;
   					}
   					div.third{
     					position:absolute;
@@ -53,6 +72,9 @@
 						width: 50px;
     					height: 50px;
     					background: #fdc57b;
+						animation-name: ex1first;
+						animation-duration: 10s;
+						animation-iteration-count: infinite;
   					}
   					div.fourth{
     					position:absolute;
@@ -61,6 +83,9 @@
 						width: 50px;
     					height: 50px;
     					background: #fdc57b;
+						animation-name: ex1first;
+						animation-duration: 10s;
+						animation-iteration-count: infinite;
   					}
 				</style>
 			</div>
@@ -77,16 +102,42 @@
 			<div class="box"></div>
 			<div class="circle"></div>
 			<style>
+				@keyframes ex2first{
+					0%{background-color: #6592CF;}
+					50%{background-color: purple;}
+					100%{background-color: #6592CF;}
+				}
+				@keyframes ex2second{
+					0%{border: 50px solid #6592CF;}
+					50%{border: 50px solid purple;}
+					100%{border:50px solid #6592CF}
+				}
+				@keyframes ex2third{
+					0%{background-color:#243D83;}
+					50%{background-color: red;}
+					100%{background-color: #243D83;}
+				}
+				@keyframes ex2fourth{
+					0%{background: #EEB850;}
+					50%{background: greenyellow;}
+					100%{background: #EEB850;}
+				}
   				.body__ex-2 {
     				margin: 0;
     				background: #6592CF;
 					position: relative;
+					animation-name: ex2first;
+					animation-duration: 10s;
+					animation-iteration-count: infinite;
 				}
 				.box {
     				background: #243D83;
     				width: 300px;
     				height: 150px;
-    				transform: translate(50px, 50%)
+    				transform: translate(50px, 50%);
+					animation-name: ex2third;
+					animation-duration: 10s;
+					animation-iteration-count: infinite;
 				}
 				.circle {
     				position: absolute;
@@ -95,7 +146,8 @@
     				width: 150px;
     				height: 150px;
     				border: 50px solid #6592CF;
-    				border-radius: 999px
+    				border-radius: 999px;
+					animation: ex2second 10s infinite, ex2third 10s infinite;
 				}
 				.circle::before {
     				position: absolute;
@@ -104,7 +156,8 @@
     				inset: 50px;
     				width: 50px;
     				height: 50px;
-    				background: #EEB850
+    				background: #EEB850;
+					animation: ex2fourth 10s infinite;
 			}
 			</style>
 		</div>
@@ -118,14 +171,34 @@
 	<div class="battle__field">
 		<div class="body__ex-4">
 			<!-- Your code here -->
-			<p class="left"></p>
-			<p class="middle"></p>
-			<p class="right"></p>
+			<div class="ex4wrapper">
+				<p class="left"></p>
+				<p class="middle"></p>
+				<p class="right"></p>
+			</div>
 			<style>
+				@keyframes ex4first{
+					0%{background-color:#62306d;}
+					25%{background-color: #243D83;}
+					50%{background-color: #6592CF;}
+					75%{background-color: #243D83;}
+					100%{background-color: #62306d;}
+				}
+				@keyframes ex4second{
+					0%{outline:none;}
+					50%{outline:5px solid red}
+					100%{outline:none;}
+				}
+				@keyframes ex4third{
+					0%{background: #f7ec7d;}
+					50%{background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);}
+					100%{background: #f7ec7d;}
+				}
   				.body__ex-4 {
   					margin: 0;
   					background: #62306d;
 					position: relative;
+					animation: ex4first 5s infinite;
 				}
 				.middle,
 				.left,
@@ -136,6 +209,7 @@
   					height: 100px;
   					border-radius: 10rem 10rem 0px 0px;
   					margin-top: 50px;
+					animation: ex4second 5s infinite, ex4third 3s infinite;
 				}
 				.middle {
   					left: 150px;
